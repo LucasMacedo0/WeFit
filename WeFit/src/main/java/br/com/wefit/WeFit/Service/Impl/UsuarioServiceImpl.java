@@ -1,8 +1,9 @@
-package br.com.wefit.WeFit.Service;
+package br.com.wefit.WeFit.Service.Impl;
 
 import br.com.wefit.WeFit.Domain.Usuario;
 import br.com.wefit.WeFit.Dto.CadastroUsuarioDTO;
 import br.com.wefit.WeFit.Exception.PersistenceException;
+import br.com.wefit.WeFit.Service.UsuarioService;
 import br.com.wefit.WeFit.repository.UsuarioRepository;
 import br.com.wefit.WeFit.validation.ValidationFields;
 import com.fasterxml.jackson.databind.ObjectMapper;
