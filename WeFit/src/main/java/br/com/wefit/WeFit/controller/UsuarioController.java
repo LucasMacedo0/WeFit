@@ -1,9 +1,10 @@
-package br.com.wefit.WeFit.Controller;
+package br.com.wefit.WeFit.controller;
 
-import br.com.wefit.WeFit.Dto.CadastroUsuarioDTO;
-import br.com.wefit.WeFit.Service.UsuarioService;
+import br.com.wefit.WeFit.dto.CadastroUsuarioDTO;
+import br.com.wefit.WeFit.service.UsuarioService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -20,6 +21,6 @@ public class UsuarioController {
     @PostMapping
     public ResponseEntity<CadastroUsuarioDTO> cadastrarUsuario(@RequestBody @Valid CadastroUsuarioDTO cadastroUsuarioDTO) {
         service.cadastrarUsuario(cadastroUsuarioDTO);
-        return ResponseEntity.ofNullable(cadastroUsuarioDTO);
+        return ResponseEntity.status(HttpStatus.CREATED).body(cadastroUsuarioDTO);
     }
 }

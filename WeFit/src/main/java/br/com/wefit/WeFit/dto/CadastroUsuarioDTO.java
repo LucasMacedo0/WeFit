@@ -1,5 +1,6 @@
-package br.com.wefit.WeFit.Dto;
+package br.com.wefit.WeFit.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
@@ -33,10 +34,11 @@ public class CadastroUsuarioDTO {
     @Email(message = "Confirmação de email inválida")
     private String confirmarEmail;
 
-    @CPF(message = "CPF inválido")
+    @CPF(message = "CPF inválido. O valor deve conter 11 dígitos numéricos e estar no formato válido.")
     private String cpf;
 
-    @CNPJ(message = "CNPJ inválido")
+    @CNPJ(message = "CNPJ inválido. Certifique-se de informar os 14 números corretamente.")
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private String cnpj;
 
     @NotBlank(message = "CEP é obrigatório")

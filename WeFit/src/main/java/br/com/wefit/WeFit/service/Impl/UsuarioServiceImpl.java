@@ -1,9 +1,9 @@
-package br.com.wefit.WeFit.Service.Impl;
+package br.com.wefit.WeFit.service.Impl;
 
-import br.com.wefit.WeFit.Domain.Usuario;
-import br.com.wefit.WeFit.Dto.CadastroUsuarioDTO;
-import br.com.wefit.WeFit.Exception.PersistenceException;
-import br.com.wefit.WeFit.Service.UsuarioService;
+import br.com.wefit.WeFit.domain.Usuario;
+import br.com.wefit.WeFit.dto.CadastroUsuarioDTO;
+import br.com.wefit.WeFit.exception.PersistenceException;
+import br.com.wefit.WeFit.service.UsuarioService;
 import br.com.wefit.WeFit.repository.UsuarioRepository;
 import br.com.wefit.WeFit.validation.ValidationFields;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -35,8 +35,6 @@ public class UsuarioServiceImpl implements UsuarioService {
                     HttpStatus.INTERNAL_SERVER_ERROR
             );
         }
-
     }
-
 
 }

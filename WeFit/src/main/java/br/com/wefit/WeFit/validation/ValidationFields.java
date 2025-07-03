@@ -1,6 +1,6 @@
 package br.com.wefit.WeFit.validation;
 
-import br.com.wefit.WeFit.Dto.CadastroUsuarioDTO;
+import br.com.wefit.WeFit.dto.CadastroUsuarioDTO;
 
 public interface ValidationFields {
 

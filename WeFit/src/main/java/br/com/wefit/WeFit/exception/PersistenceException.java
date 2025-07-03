@@ -1,4 +1,4 @@
-package br.com.wefit.WeFit.Exception;
+package br.com.wefit.WeFit.exception;
 
 import org.springframework.http.HttpStatus;
 

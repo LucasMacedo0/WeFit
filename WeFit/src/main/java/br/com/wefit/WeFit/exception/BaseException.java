@@ -1,4 +1,4 @@
-package br.com.wefit.WeFit.Exception;
+package br.com.wefit.WeFit.exception;
 
 import lombok.Getter;
 import lombok.Setter;
